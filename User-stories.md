@@ -25,13 +25,3 @@
 1. As a technical user, I want to be able to automatically inform the ticket's author, and other members of my team, about progress made on her ticket so that I don't need to manually contact the author to keep her up-to-date
 
 
-
-
-# High-level functionalities of the app
-
-1. Create, Read, Update, Remove tickets
-1. Add, View, Update, Remove users
-1. Allocate users to the following groups:
-    *
-1. Add comments to tickets
-1. In comments, send email to a particular user when this user is tagged with "@user_name"
