@@ -1,0 +1,12 @@
+script:
+- |
+  git config user.name "vgkienzler"
+  git config user.email "63921672+vgkienzler@users.noreply.github.com"
+  git remote remove origin
+  git remote add origin https://github.com/lean-office-apps/ticket-management-web-wiki.git > /dev/null 2>&1
+  git remote add upstream https://github.com/lean-office-apps/ticket-management-web-wiki.git > /dev/null 2>&1
+  git fetch origin
+  git fetch upstream
+  git merge upstream/master --no-edit
+  git push origin HEAD:master > /dev/null 2>&1
+  git push upstream HEAD:master > /dev/null 2>&1
