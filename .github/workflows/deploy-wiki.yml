@@ -7,13 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PUSH_TOKEN }}    
     - run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "63921672+vgkienzler@users.noreply.github.com"
+        git config --local user.name "vgkienzler"
         git remote remove origin
-        git remote add origin https://github.com/lean-office-apps/tickets-management-web.git
-        git remote -v
-        git branch --all
-        git checkout master
-        git push --set-upstream origin master
+        git remote add origin https://github.com/lean-office-apps/tickets-management-web-wiki.git
+        git remote add upstream https://github.com/lean-office-apps/tickets-management-web.wiki.git
+        git fetch --unshallow upstream
+        git fetch --unshallow origin
+        git merge --no-edit upstream/master
+        git push upstream HEAD:master
   
