@@ -1,17 +1,15 @@
-name: deploy-wiki
-
+name: Deploy wiki manually
 on: workflow_dispatch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Commit updated wiki
-    run: |
-      git config --local user.email "action@github.com"
-      git config --local user.name "GitHub Action"
-      git remote remove origin
-      git remote add origin https://github.com/lean-office-apps/tickets-management-web.git
-      git checkout master
-      git push --set-upstream origin master
+    - run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git remote remove origin
+        git remote add origin https://github.com/lean-office-apps/tickets-management-web.git
+        git checkout master
+        git push --set-upstream origin master
   
