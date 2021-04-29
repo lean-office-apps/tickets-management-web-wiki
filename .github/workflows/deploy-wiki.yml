@@ -14,5 +14,6 @@ jobs:
         git remote add origin https://github.com/lean-office-apps/tickets-management-web.git
         git remote -v
         git branch --all
+        git checkout master
         git push --set-upstream origin master
   
